@@ -1,0 +1,272 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fa;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    margin: 0 0 10px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: navy;
+    color: white;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav a.active {
+    color: #ffcc00;
+}
+
+.toggle-nav {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 70px;
+    width: 220px;
+    height: calc(100% - 70px);
+    background-color: #0eb2f9;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.sidebar img {
+    width: 140px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-icons a img {
+    width: 42px;
+    height: 42px;
+}
+
+/* Main Content */
+main {
+    margin-left: 240px;
+    padding: 90px 30px 30px 30px;
+}
+
+/* Hero Section */
+.hero {
+    background: #e3f2fd;
+    border-radius: 10px;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn-hero {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: navy;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-hero:hover {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+/* About Me Section */
+.profile-img {
+    width: 150px;
+    border-radius: 50%;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.skill-category {
+    flex: 1 1 250px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-category li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.skill-category li img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Projects Section */
+.item {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Contact Section */
+.contact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.contact-card {
+    width: 200px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+.contact-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.contact-card .contact-info h3 {
+    margin-bottom: 5px;
+}
+
+/* Back-to-Top Icon */
+.home-icon {
+    font-size: 28px;
+    text-align: center;
+    margin: 20px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media(max-width: 1024px) {
+    main {
+        margin-left: 0;
+        padding: 100px 20px 20px 20px;
+    }
+    .sidebar {
+        display: none;
+    }
+}
+
+@media(max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        background: navy;
+        position: absolute;
+        right: 20px;
+        top: 60px;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    nav.visible {
+        display: flex;
+    }
+
+    .toggle-nav {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+}
