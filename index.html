@@ -28,22 +28,23 @@
     </header>
 
     <!-- Sidebar -->
-    <aside class="sidebar">
-        <img src="Assests/Images/henry.jpg" alt="Profile Picture of Terna Henry Wua">
-        <h2>Terna Henry Wua</h2>
-        <!-- Dynamic greeting injected by JS -->
-        <div class="social-icons">
-            <a href="https://github.com/Clivez12" target="_blank" aria-label="GitHub Profile">
-                <img src="Assests/Images/githublogo.png" alt="GitHub Logo">
-            </a>
-            <a href="https://www.linkedin.com/in/terna-henry-wua" target="_blank" aria-label="LinkedIn Profile">
-                <img src="Assests/Images/linkedinlogo.png" alt="LinkedIn Logo">
-            </a>
-            <a href="mailto:henryternawua@gmail.com" target="_blank" aria-label="Send an Email">
-                <img src="Assests/Images/emaillogo.png" alt="Email Logo">
-            </a>
-        </div>
-    </aside>
+<aside class="sidebar">
+    <img src="Assests/Images/Henry.png" alt="Profile Picture of Terna Henry Wua">
+    <h2>Terna Henry Wua</h2>
+    <div class="social-icons">
+        <a href="https://github.com/Clivez12" target="_blank" aria-label="GitHub Profile">
+            <img src="Assests/Images/githublogo.png" alt="GitHub Logo">
+        </a>
+        <a href="https://www.linkedin.com/in/terna-henry-wua" target="_blank" aria-label="LinkedIn Profile">
+            <img src="Assests/Images/linkedinlogo.png" alt="LinkedIn Logo">
+        </a>
+        <!-- Updated Email Icon Link -->
+        <a href="#contact" aria-label="Go to Contact Form">
+            <img src="Assests/Images/emaillogo.png" alt="Email Logo">
+        </a>
+    </div>
+</aside>
+
 
     <!-- Main Content -->
     <main id="home">
@@ -57,7 +58,7 @@
         <!-- About Me Section -->
         <section id="about">
             <h2>About Me</h2>
-            <img src="Assests/Images/henry.jpg" alt="Profile Image of Terna Henry Wua" class="profile-img">
+            <img src="Assests/Images/Henry.png" alt="Profile Image of Terna Henry Wua" class="profile-img">
 
             <p>I’m a passionate Front-End Developer, Cybersecurity Enthusiast, and Entrepreneur based in Benue State, Nigeria. 
                I specialize in creating visually appealing, responsive, and user-friendly web applications while ensuring robust security practices across digital platforms.</p>
@@ -88,7 +89,7 @@
         <!-- Skills Section -->
         <section id="skills">
             <h2>Skills</h2>
-            <p>Key technical skills and areas of expertise:</p>
+            <p>My Key technical skills and areas of expertise:</p>
 
             <div class="skills-container">
                 <div class="skill-category">
@@ -130,65 +131,108 @@
         <section id="projects">
             <h2>Projects</h2>
 
-            <div class="item">
-                <h3>Portfolio Website</h3>
-                <p>My personal portfolio built using HTML, CSS, and JavaScript, showcasing skills, projects, and contact info. Features smooth scrolling, responsive design, and modern UI.</p>
+           <div class="project-card">
+                <h3>My Major Projects</h3>
+                <ul class="project-list">
+                    <li>
+                        <strong>Portfolio Website:</strong>
+            My personal portfolio built using HTML, CSS, and JavaScript, showcasing skills, projects, and contact info. Features smooth scrolling, responsive design, and modern UI.
+                    </li>
+                    <li>
+                        <strong>Groovy Stylez Hair Salon Website:</strong>
+            Full-stack web app using React, Node.js, and MySQL. Includes service booking, product showcase, user authentication, and dynamic content management.
+                    </li>
+                    <li>
+                        <strong>Deep Learning for Orange Varieties Classification:</strong>
+            Computer vision project classifying orange varieties using CNN models. Highlights skills in Python, machine learning, and AI for agriculture.
+                    </li>
+                    <li>
+                        <strong>Online Calculator:</strong>
+            Responsive web-based calculator built with HTML, CSS, and JavaScript. Features real-time validation and arithmetic operations.
+                    </li>
+                </ul>
             </div>
 
-            <div class="item">
-                <h3>Groovy Stylez Hair Salon Website</h3>
-                <p>Full-stack website using React, Node.js, and MySQL. Includes service booking, product showcase, user authentication, and dynamic content management.</p>
-            </div>
-
-            <div class="item">
-                <h3>Deep Learning for Orange Varieties Classification</h3>
-                <p>Computer vision project classifying orange varieties using CNN models. Highlights skills in Python, machine learning, and AI applications for agriculture.</p>
-            </div>
-
-            <div class="item">
-                <h3>Online Calculator</h3>
-                <p>Responsive web-based calculator built with HTML, CSS, and JavaScript. Features real-time validation, intuitive UI, and arithmetic operations.</p>
-            </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>Feel free to connect with me via any of the channels below:</p>
+    <!-- Contact Section -->
+<section id="contact" class="contact">
+  <h2>Contact Me</h2>
+    <p class="or-text1">Feel free to contact me here: </p>
 
-            <div class="contact-cards">
-                <div class="contact-card">
-                    <a href="https://www.linkedin.com/in/terna-henry-wua" target="_blank">
-                        <img src="Assests/Images/linkedinlogo.png" alt="LinkedIn Logo">
-                        <div class="contact-info">
-                            <h3>LinkedIn</h3>
-                            <p>Connect professionally</p>
-                        </div>
-                    </a>
-                </div>
+<!-- Contact Form (Web3Forms) -->
+<form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+  <!-- 🔑 Your Web3Forms Access Key -->
+  <input type="hidden" name="access_key" value="e512b00a-636b-4fef-b570-0068e7e85e49">
 
-                <div class="contact-card">
-                    <a href="https://github.com/Clivez12" target="_blank">
-                        <img src="Assests/Images/githublogo.png" alt="GitHub Logo">
-                        <div class="contact-info">
-                            <h3>GitHub</h3>
-                            <p>Explore projects</p>
-                        </div>
-                    </a>
-                </div>
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
 
-                <div class="contact-card">
-                    <a href="mailto:henryternawua@gmail.com" target="_blank">
-                        <img src="Assests/Images/emaillogo.png" alt="Email Logo">
-                        <div class="contact-info">
-                            <h3>Email</h3>
-                            <p>Send me a message</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+  <button type="submit">Send Message</button>
+
+  <!-- ✅ Success Message -->
+<p class="success-message" style="display: none;">
+  <span class="envelope">✉️</span>
+  <span class="success-text">Your message has been sent successfully! Thank you for reaching out.</span>
+</p>
+
+
+  <!-- ❌ Error Message -->
+  <p class="error-message" style="display: none; color: red; margin-top: 10px;">
+    ⚠️ Oops! Something went wrong. Please try again later.
+  </p>
+</form>
+
+<!-- Script for handling success and error messages -->
+<script>
+document.querySelector('.contact-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData
+    });
+    if (response.ok) {
+      form.querySelector('.success-message').style.display = 'block';
+      form.querySelector('.error-message').style.display = 'none';
+      form.reset();
+    } else {
+      throw new Error('Network error');
+    }
+  } catch (error) {
+    form.querySelector('.error-message').style.display = 'block';
+    form.querySelector('.success-message').style.display = 'none';
+  }
+});
+</script>
+
+<p class="or-text">Or You can: </p>
+
+  <div class="contact-grid">
+    <div class="contact-card">
+      <img src="Assests/Images/linkedinlogo.png" alt="LinkedIn" />
+      <p>LinkedIn</p>
+      <a href="https://www.linkedin.com/in/terna-henry-wua" target="_blank" rel="noopener">Visit My Profile</a>
+    </div>
+
+    <div class="contact-card">
+      <img src="Assests/Images/githublogo.png" alt="GitHub" />
+      <p>GitHub</p>
+      <a href="https://github.com/Clivez12" target="_blank" rel="noopener">View My Projects</a>
+    </div>
+
+    <div class="contact-card">
+      <img src="Assests/Images/whatsapplogo.png" alt="WhatsApp" />
+      <p>WhatsApp</p>
+      <a href="https://wa.me/2347061139867" target="_blank" rel="noopener">Chat Me on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
 
     <!-- Back-to-Top Icon -->
     <div class="home-icon" role="button" aria-label="Go to top">🏠</div>
