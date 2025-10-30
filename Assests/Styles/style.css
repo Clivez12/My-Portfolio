@@ -1,14 +1,14 @@
-/* Global Styles */
+/* --- Global Styles and Basic Layout --- */
 html {
     scroll-behavior: smooth;
 }
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f7fa;
     color: #333;
-    scroll-behavior: smooth;
 }
 
 h1, h2, h3 {
@@ -19,7 +19,7 @@ p {
     line-height: 1.6;
 }
 
-/* Header */
+/* --- Header and Navigation Bar --- */
 header {
     display: flex;
     align-items: center;
@@ -62,7 +62,7 @@ nav a.active {
     cursor: pointer;
 }
 
-/* Sidebar */
+/* --- Sidebar Section --- */
 .sidebar {
     position: fixed;
     left: 0;
@@ -100,15 +100,14 @@ nav a.active {
     height: 42px;
 }
 
-/* Main Content */
+/* --- Main Content Layout --- */
 main {
     margin-left: 240px;
     padding: 90px 30px 30px 30px;
-    padding-top: 90px;
     box-sizing: border-box;
 }
 
-/* Hero Section */
+/* --- Hero Section --- */
 .hero {
     background: #e3f2fd;
     border-radius: 10px;
@@ -135,6 +134,7 @@ main {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s ease;
 }
 
 .btn-hero:hover {
@@ -142,7 +142,7 @@ main {
     color: #000;
 }
 
-/* About Me Section */
+/* --- About Section --- */
 .profile-img {
     width: 150px;
     border-radius: 50%;
@@ -151,7 +151,7 @@ main {
     margin-bottom: 10px;
 }
 
-/* Skills Section */
+/* --- Skills Section --- */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -184,11 +184,10 @@ main {
     margin-right: 10px;
 }
 
-/* ========== Projects Section (Unified Card) ========== */
+/* --- Projects Section --- */
 #projects {
-    padding: 60px 20px;
-    padding-top: 20px;
     background-color: #f4f7fa;
+    padding: 60px 20px 60px;
     text-align: left;
 }
 
@@ -199,12 +198,10 @@ main {
     padding: 30px;
     max-width: 850px;
     margin: 0 auto;
-    text-align: left;
 }
 
 .project-card h3 {
     color: black;
-    text-align: left;
     margin-bottom: 20px;
 }
 
@@ -228,30 +225,35 @@ main {
     background-color: #bbdefb;
 }
 
-
-/* ---------- CONTACT SECTION ---------- */
+/* --- Contact Section --- */
 .contact {
     background: #f9f9f9;
-    padding: 60px 20px;
+    padding: 20px 20px 60px;
     text-align: center;
+    scroll-margin-top: 90px;
 }
 
 .contact h2 {
     font-size: 2rem;
     color: #222;
     text-align: left;
-    padding-top: 20p;
-    margin-bottom: 1px;
+    margin-bottom: 10px;
 }
 
 .or-text1 {
-    margin: 2rem 0 1rem;
     color: #555;
-    text-align: left;
     font-style: italic;
-    padding-top: 20px;
+    text-align: center;
+    margin: 10px 0;
+}
+.or-text {
+    color: #555;
+    font-style: italic;
+    text-align: left;
+    margin: 10px 0;
 }
 
+/* Contact form styling */
 .contact-form {
     max-width: 600px;
     margin: 0 auto 2rem auto;
@@ -293,70 +295,13 @@ main {
     transform: translateY(-2px);
 }
 
-.or-text {
-    margin: 2rem 0 1rem;
-    color: #555;
-    font-style: italic;
-}
-
-/* ---------- CONTACT SECTION ---------- */
-
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto 2rem auto;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: border 0.3s, box-shadow 0.3s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
-    outline: none;
-}
-
-.contact-form button {
-    background: #007bff;
-    color: #fff;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
-    width: 100%;
-}
-
-.contact-form button:hover {
-    background: #0056b3;
-    transform: translateY(-2px);
-}
-
-.or-text {
-    margin: 2rem 0 1rem;
-    color: #555;
-    font-style: italic;
-}
-
-/* ---------- CONTACT CARDS SECTION (GRID LAYOUT) ---------- */
+/* Contact info cards */
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns by default (wide screens) */
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     justify-items: center;
-    align-items: start;
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 .contact-card {
@@ -397,7 +342,7 @@ main {
     text-decoration: underline;
 }
 
-/* Success Message Animation */
+/* --- Success Message Animation --- */
 .success-message {
     display: flex;
     align-items: center;
@@ -416,7 +361,6 @@ main {
     transform: translateY(0);
 }
 
-/* Envelope animation: fade-in + bounce */
 .success-message .envelope {
     display: inline-block;
     font-size: 24px;
@@ -425,63 +369,26 @@ main {
     transition: transform 0.8s ease, opacity 0.8s ease;
 }
 
-.success-message.show .envelope,
-.success-message .envelope.animate {
+.success-message.show .envelope {
     animation: envelopeBounce 0.8s ease forwards;
 }
 
 @keyframes envelopeBounce {
-    0% {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    30% {
-        transform: translateY(-10px);
-        opacity: 1;
-    }
-    50% {
-        transform: translateY(0);
-    }
-    70% {
-        transform: translateY(-5px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+    0% { transform: translateY(-20px); opacity: 0; }
+    30% { transform: translateY(-10px); opacity: 1; }
+    50% { transform: translateY(0); }
+    70% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
 }
 
-/* Ensure the message is responsive */
-@media (max-width: 768px) {
-    .success-message {
-        flex-direction: column;
-        font-size: 0.9rem;
-    }
-
-    .success-message .envelope {
-        font-size: 20px;
-    }
+/* --- Project Section Offset Adjustment --- */
+#projects {
+    padding-top: 20px;
+    margin-top: 0;
+    scroll-margin-top: 80px;
 }
 
-/* ---------- RESPONSIVE GRID ---------- */
-@media (max-width: 1024px) {
-    .contact-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .contact-grid {
-        grid-template-columns: 1fr; /* 1 card per row on small screens */
-        gap: 20px;
-    }
-
-    .contact-card {
-        width: 90%;
-        max-width: 420px;
-    }
-}
-
-/* Back-to-Top Icon */
+/* --- Footer and Back-to-Top --- */
 .home-icon {
     font-size: 28px;
     text-align: center;
@@ -489,7 +396,6 @@ main {
     cursor: pointer;
 }
 
-/* Footer */
 footer {
     background: #333;
     color: white;
@@ -499,31 +405,34 @@ footer {
     border-radius: 10px;
 }
 
-/* Responsive Layouts */
-@media(max-width: 1024px) {
+/* --- Responsive Design --- */
+@media (max-width: 1024px) {
     main {
         margin-left: 0;
-        padding: 100px 20px 20px 20px;
+        padding: 100px 20px 20px;
     }
+
     .sidebar {
         display: none;
     }
+
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     nav {
         display: none;
         flex-direction: column;
-        background: skyblue; /* 🌈 skyblue background */
+        background: skyblue;
         position: absolute;
-        top: 70px; /* below header */
-        right: 10px; /* anchor to the right side */
-        width: 170px; /* 👈 smaller width */
-        padding: 15px 0;
-        text-align: center;
-        border-radius: 10px;
+        top: 70px;
+        right: 10px;
+        width: 170px;
         padding: 10px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        text-align: center;
         box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         transition: opacity 0.3s ease, transform 0.3s ease;
         opacity: 0;
@@ -552,7 +461,6 @@ footer {
 
     .toggle-nav {
         display: block;
-        cursor: pointer;
     }
 
     .hero h1 {
@@ -560,26 +468,7 @@ footer {
     }
 
     .contact-grid {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .contact-card {
-        width: 90%;
-        max-width: 420px;
-    }
-}
-
-
-
-    .hero h1 {
-        font-size: 28px;
-    }
-
-    .contact-grid {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
         gap: 20px;
     }
 
@@ -588,20 +477,18 @@ footer {
         max-width: 420px;
     }
 
+    .success-message {
+        flex-direction: column;
+        font-size: 0.9rem;
+    }
 
-/* Prevent section headings from being hidden behind fixed header */
-[id] {
-    scroll-margin-top: 100px;
+    .success-message .envelope {
+        font-size: 20px;
+    }
 }
-/* Fix navbar overlap on all screens */
+
+/* --- Scroll Offset Fix --- */
 section {
     scroll-margin-top: 70px;
     padding-top: 20px;
 }
-
-.about,
-.skills {
-    padding-top: 20px;
-}
-
-

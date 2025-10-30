@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // === SMOOTH SCROLLING FOR NAVIGATION LINKS ===
+    // SMOOTH SCROLLING FOR NAVIGATION LINKS
     const navLinks = document.querySelectorAll("nav a");
     navLinks.forEach(link => {
         link.addEventListener("click", (event) => {
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // === HIGHLIGHT ACTIVE SECTION IN NAV ON SCROLL ===
+    // HIGHLIGHT ACTIVE SECTION IN NAV ON SCROLL
     const sections = document.querySelectorAll("section");
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { threshold: 0.6 });
     sections.forEach(section => observer.observe(section));
 
-    // === BACK-TO-TOP FUNCTIONALITY ===
+    // BACK-TO-TOP FUNCTIONALITY
     const homeIcon = document.querySelector(".home-icon");
     if (homeIcon) {
         homeIcon.addEventListener("click", () => {
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // === DYNAMIC GREETING ===
+    // DYNAMIC GREETING
     const sidebar = document.querySelector(".sidebar");
     if (sidebar) {
         const greetingElement = document.createElement("p");
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         sidebar.appendChild(greetingElement);
     }
 
-    // === MOBILE NAV TOGGLE WITH AUTO CLOSE ===
+    // MOBILE NAV TOGGLE WITH AUTO CLOSE
     const toggleButton = document.querySelector(".toggle-nav");
     const navMenu = document.querySelector("header nav");
 
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // === CONTACT FORM SUCCESS/ERROR ANIMATION ===
+    // CONTACT FORM SUCCESS/ERROR ANIMATION
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', async function(e) {
@@ -102,12 +102,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         contactForm.reset();
 
-                        // Hide success message after 4 seconds
+                        // Hide success message after 20 seconds
                         setTimeout(() => {
                             successMsg.classList.remove('show');
                             successMsg.style.display = 'none';
                             if (envelope) envelope.classList.remove('animate');
-                        }, 4000);
+                        }, 20000);
                     }
                     if (errorMsg) errorMsg.style.display = 'none';
                 } else {
